@@ -31,13 +31,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.panelPlay = new System.Windows.Forms.Panel();
+            this.labelScore = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.labelTimer = new System.Windows.Forms.Label();
             this.labelWordTimer = new System.Windows.Forms.Label();
             this.txtInput = new System.Windows.Forms.TextBox();
             this.labelWord = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.labelScore = new System.Windows.Forms.Label();
             this.panelPlay.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,15 @@
             this.panelPlay.Name = "panelPlay";
             this.panelPlay.Size = new System.Drawing.Size(684, 561);
             this.panelPlay.TabIndex = 2;
+            // 
+            // labelScore
+            // 
+            this.labelScore.AutoSize = true;
+            this.labelScore.Location = new System.Drawing.Point(263, 35);
+            this.labelScore.Name = "labelScore";
+            this.labelScore.Size = new System.Drawing.Size(74, 18);
+            this.labelScore.TabIndex = 6;
+            this.labelScore.Text = "Score : ";
             // 
             // progressBar
             // 
@@ -132,16 +141,6 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // labelScore
-            // 
-            this.labelScore.AutoSize = true;
-            this.labelScore.Location = new System.Drawing.Point(263, 35);
-            this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(74, 18);
-            this.labelScore.TabIndex = 6;
-            this.labelScore.Text = "Score : ";
-            this.labelScore.Click += new System.EventHandler(this.labelScore_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -152,6 +151,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formClosing);
             this.panelPlay.ResumeLayout(false);
             this.panelPlay.PerformLayout();
             this.ResumeLayout(false);

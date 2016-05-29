@@ -165,7 +165,7 @@ namespace SpeedDictation_v2
                 catch (Exception e) { }
 
                 /* ProgressBar가 MAX일때 스레드 종료 */
-                if (progressValue > 1000) {
+                if (progressValue > 1000 || mainForm._goBack) {
                     mainForm.progressBar.Value = 0;
                     mainForm.labelWord.Text = "END!";
                     mainForm.labelTimer.Text = "";
